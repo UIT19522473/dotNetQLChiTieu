@@ -36,3 +36,4 @@ D:\dotNetQLChiTieu\QuanLyChiTieu\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.Co
 D:\dotNetQLChiTieu\QuanLyChiTieu\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.csproj.CopyComplete
 D:\dotNetQLChiTieu\QuanLyChiTieu\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.exe
 D:\dotNetQLChiTieu\QuanLyChiTieu\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.pdb
+D:\dotNetQLChiTieu\QuanLyChiTieu\QuanLyChiTieu\obj\Debug\QuanLyChiTieu.Screens.Categories.resources

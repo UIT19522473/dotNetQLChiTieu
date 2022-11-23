@@ -35,8 +35,9 @@
             this.labelChildForm = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.IconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
-            this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnWallet = new FontAwesome.Sharp.IconButton();
+            this.btnCategories = new FontAwesome.Sharp.IconButton();
+            this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnChart = new FontAwesome.Sharp.IconButton();
             this.btnTransfer = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
@@ -51,8 +52,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(5)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.btnSetting);
             this.panelMenu.Controls.Add(this.btnWallet);
+            this.panelMenu.Controls.Add(this.btnCategories);
+            this.panelMenu.Controls.Add(this.btnSetting);
             this.panelMenu.Controls.Add(this.btnChart);
             this.panelMenu.Controls.Add(this.btnTransfer);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -115,6 +117,50 @@
             this.IconCurrentChild.TabIndex = 0;
             this.IconCurrentChild.TabStop = false;
             // 
+            // btnWallet
+            // 
+            this.btnWallet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnWallet.FlatAppearance.BorderSize = 0;
+            this.btnWallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWallet.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnWallet.IconChar = FontAwesome.Sharp.IconChar.Wallet;
+            this.btnWallet.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnWallet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWallet.IconSize = 32;
+            this.btnWallet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWallet.Location = new System.Drawing.Point(0, 380);
+            this.btnWallet.Name = "btnWallet";
+            this.btnWallet.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnWallet.Size = new System.Drawing.Size(222, 60);
+            this.btnWallet.TabIndex = 7;
+            this.btnWallet.Text = "Ví của tôi";
+            this.btnWallet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWallet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnWallet.UseVisualStyleBackColor = true;
+            this.btnWallet.Click += new System.EventHandler(this.btnWallet_Click);
+            // 
+            // btnCategories
+            // 
+            this.btnCategories.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategories.FlatAppearance.BorderSize = 0;
+            this.btnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategories.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCategories.IconChar = FontAwesome.Sharp.IconChar.Tags;
+            this.btnCategories.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnCategories.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCategories.IconSize = 32;
+            this.btnCategories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategories.Location = new System.Drawing.Point(0, 320);
+            this.btnCategories.Name = "btnCategories";
+            this.btnCategories.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCategories.Size = new System.Drawing.Size(222, 60);
+            this.btnCategories.TabIndex = 6;
+            this.btnCategories.Text = "Thể Loại";
+            this.btnCategories.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategories.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategories.UseVisualStyleBackColor = true;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
+            // 
             // btnSetting
             // 
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -136,28 +182,6 @@
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSetting.UseVisualStyleBackColor = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
-            // btnWallet
-            // 
-            this.btnWallet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWallet.FlatAppearance.BorderSize = 0;
-            this.btnWallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWallet.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnWallet.IconChar = FontAwesome.Sharp.IconChar.Wallet;
-            this.btnWallet.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnWallet.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnWallet.IconSize = 32;
-            this.btnWallet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWallet.Location = new System.Drawing.Point(0, 320);
-            this.btnWallet.Name = "btnWallet";
-            this.btnWallet.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnWallet.Size = new System.Drawing.Size(222, 60);
-            this.btnWallet.TabIndex = 4;
-            this.btnWallet.Text = "Ví của tôi";
-            this.btnWallet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWallet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnWallet.UseVisualStyleBackColor = true;
-            this.btnWallet.Click += new System.EventHandler(this.btnWallet_Click);
             // 
             // btnChart
             // 
@@ -262,7 +286,6 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton btnSetting;
-        private FontAwesome.Sharp.IconButton btnWallet;
         private FontAwesome.Sharp.IconButton btnChart;
         private FontAwesome.Sharp.IconButton btnTransfer;
         private FontAwesome.Sharp.IconButton btnHome;
@@ -272,6 +295,8 @@
         private FontAwesome.Sharp.IconPictureBox IconCurrentChild;
         private System.Windows.Forms.Label labelChildForm;
         private System.Windows.Forms.Panel panelDesktop;
+        private FontAwesome.Sharp.IconButton btnWallet;
+        private FontAwesome.Sharp.IconButton btnCategories;
     }
 }
 

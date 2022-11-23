@@ -128,16 +128,23 @@ namespace QuanLyChiTieu
             OpenChildForm(new Analyze());
         }
 
-        private void btnWallet_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.Color4);
-            OpenChildForm(new Wallet());
-        }
+
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.Color5);
             OpenChildForm(new Setting());
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.Color6);
+            OpenChildForm(new Categories());
+        }
+        private void btnWallet_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.Color4);
+            OpenChildForm(new Wallet());
         }
         private void defaultScreen()
         {
@@ -149,5 +156,7 @@ namespace QuanLyChiTieu
         {
 
         }
+
+
     }
 }

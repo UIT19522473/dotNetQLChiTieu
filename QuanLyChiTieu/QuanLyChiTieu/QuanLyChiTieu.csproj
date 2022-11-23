@@ -73,6 +73,12 @@
     <Compile Include="Screens\Analyze.Designer.cs">
       <DependentUpon>Analyze.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Analyze.resx">
       <DependentUpon>Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
