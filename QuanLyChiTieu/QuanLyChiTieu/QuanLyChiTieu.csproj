@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,13 +36,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,19 +80,118 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\AddCategoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AddCategoryDialog.Designer.cs">
+      <DependentUpon>AddCategoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AddWallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AddWallet.Designer.cs">
+      <DependentUpon>AddWallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\dlAddTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\dlAddTransfer.Designer.cs">
+      <DependentUpon>dlAddTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\dlChooseCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\dlChooseCategory.Designer.cs">
+      <DependentUpon>dlChooseCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\iconItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\iconItem.Designer.cs">
+      <DependentUpon>iconItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ItemExpense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ItemExpense.Designer.cs">
+      <DependentUpon>ItemExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ItemTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ItemTransfer.Designer.cs">
+      <DependentUpon>ItemTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LegendChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\LegendChart.Designer.cs">
+      <DependentUpon>LegendChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WalletItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\WalletItem.Designer.cs">
+      <DependentUpon>WalletItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AnalyzeCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AnalyzeCash.Designer.cs">
+      <DependentUpon>AnalyzeCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AnalyzeCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\AnalyzeCategories.Designer.cs">
+      <DependentUpon>AnalyzeCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CategoriesItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\CategoriesItem.Designer.cs">
+      <DependentUpon>CategoriesItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\test.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalFunc\GetIconFWS.cs" />
+    <Compile Include="GlobalFunc\TransferCustom.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MyCategory.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyTransfer.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyWallet.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +213,12 @@
     <Compile Include="Screens\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\IconDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\IconDialog.Designer.cs">
+      <DependentUpon>IconDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +237,42 @@
     <Compile Include="Screens\Wallet.Designer.cs">
       <DependentUpon>Wallet.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\AddCategoryDialog.resx">
+      <DependentUpon>AddCategoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AddWallet.resx">
+      <DependentUpon>AddWallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\dlAddTransfer.resx">
+      <DependentUpon>dlAddTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\dlChooseCategory.resx">
+      <DependentUpon>dlChooseCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\iconItem.resx">
+      <DependentUpon>iconItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ItemExpense.resx">
+      <DependentUpon>ItemExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ItemTransfer.resx">
+      <DependentUpon>ItemTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LegendChart.resx">
+      <DependentUpon>LegendChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WalletItem.resx">
+      <DependentUpon>WalletItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AnalyzeCash.resx">
+      <DependentUpon>AnalyzeCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AnalyzeCategories.resx">
+      <DependentUpon>AnalyzeCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\CategoriesItem.resx">
+      <DependentUpon>CategoriesItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +293,9 @@
     <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\IconDialog.resx">
+      <DependentUpon>IconDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +305,13 @@
     <EmbeddedResource Include="Screens\Wallet.resx">
       <DependentUpon>Wallet.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelData.edmx.diagram">
+      <DependentUpon>ModelData.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,9 +331,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconAdd.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-uit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+      <LastGenOutput>ModelData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+      <LastGenOutput>ModelData.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

@@ -88,11 +88,11 @@
             // labelChildForm
             // 
             this.labelChildForm.AutoSize = true;
-            this.labelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChildForm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelChildForm.Location = new System.Drawing.Point(57, 18);
+            this.labelChildForm.Location = new System.Drawing.Point(57, 12);
             this.labelChildForm.Name = "labelChildForm";
-            this.labelChildForm.Size = new System.Drawing.Size(84, 20);
+            this.labelChildForm.Size = new System.Drawing.Size(130, 29);
             this.labelChildForm.TabIndex = 1;
             this.labelChildForm.Text = "Trang chủ";
             // 

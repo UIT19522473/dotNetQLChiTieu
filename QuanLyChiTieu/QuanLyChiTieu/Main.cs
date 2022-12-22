@@ -40,6 +40,7 @@ namespace QuanLyChiTieu
             public static Color Color4 = Color.FromArgb(95, 77, 221);
             public static Color Color5 = Color.FromArgb(249, 88, 155);
             public static Color Color6 = Color.FromArgb(24, 161, 251);
+            
         }
 
 

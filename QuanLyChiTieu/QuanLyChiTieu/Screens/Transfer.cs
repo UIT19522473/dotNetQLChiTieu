@@ -16,5 +16,10 @@ namespace QuanLyChiTieu.Screens
         {
             InitializeComponent();
         }
+
+        private void transferIcon1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
